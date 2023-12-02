@@ -4,7 +4,6 @@ channels:
     - conda-forge
 dependencies:
     - numpy
-    - matplotlib
     - jupyter
     - pillow
     - scikit-learn
@@ -24,3 +23,4 @@ dependencies:
         - opencv3
         - imageio=2.1.2
         - pyqt=4.11.4
+        - matplotlib
