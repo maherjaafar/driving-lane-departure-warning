@@ -223,7 +223,7 @@ def warper(img, M):
 ## fit the lane line
 def full_search(binary_warped, visualization=False):
 
-    histogram = np.sum(int(binary_warped[binary_warped.shape[0]/2:,:]), axis=0)
+    histogram = np.sum(binary_warped[binary_warped.shape[0]//2:,:], axis=0)
     # Create an output image to draw on and  visualize the result
     out_img = np.dstack((binary_warped, binary_warped, binary_warped))*255
     out_img = out_img.astype('uint8')
