@@ -188,7 +188,7 @@ def find_edges(img, s_thresh=s_thresh, sx_thresh=sx_thresh, dir_thresh=dir_thres
 
     img = np.copy(img)
     # Convert to HSV color space and threshold the s channel
-    hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS).astype(np.float)
+    hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS).astype(float)
     s_channel = hls[:,:,2]
     s_binary = threshold_col_channel(s_channel, thresh=s_thresh)
 
