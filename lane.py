@@ -484,7 +484,7 @@ def create_output_frame(offcenter, pts, undist_ori, fps, curvature, curve_direct
     ############## generate the combined output frame only for visualization purpose ################
     whole_frame[40:40+h, 20:20+w, :] = undist_ori
     whole_frame[40:40+h, 60+w:60+2*w, :] = output
-    whole_frame[220+h/2:220+2*h/2, 20:20+w/2, :] = undist_birdview
+    whole_frame[220+int(h/2):220+int(2*h/2), 20:20+int(w/2), :] = undist_birdview
     whole_frame[220+h/2:220+2*h/2, 40+w/2:40+w, 0] = cv2.resize((binary_sub*255).astype(np.uint8), (0,0), fx=1/2, fy=1/2)
     whole_frame[220+h/2:220+2*h/2, 40+w/2:40+w, 1] = cv2.resize((binary_sub*255).astype(np.uint8), (0,0), fx=1/2, fy=1/2)
     whole_frame[220+h/2:220+2*h/2, 40+w/2:40+w, 2] = cv2.resize((binary_sub*255).astype(np.uint8), (0,0), fx=1/2, fy=1/2)
